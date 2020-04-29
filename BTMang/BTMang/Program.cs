@@ -31,7 +31,7 @@ namespace BTMang
 			//2. Xuất các giá trị trong mảng
 			for (int i = 0; i < M.Length; i++)
 			{
-				Console.Write(M[i] + "  ");
+				Console.Write(M[i]+"\t");
 			}
 			//3. Đảo ngược mảng
 			Array.Reverse(M);
@@ -50,9 +50,9 @@ namespace BTMang
 			}
 			//5. Tính tổng mảng
 			int sum = 0;
-			foreach (int x in M)
+			for(int i = 0; i < M.Length; i++)
 			{
-				sum += x;
+				sum += M[i];
 			}
 			Console.WriteLine("\nTổng mảng là {0}", sum);
 			//6. Tìm kiếm mảng
@@ -69,11 +69,54 @@ namespace BTMang
 				Console.WriteLine("TÌm thấy {0} tại vị trí {1}", h, kq);
 
 			}
+			////7. tìm theo tuyến tính (ko quan tâm M đã sắp hay chưa)
+			//Console.WriteLine("Mời bạn nhập vào số muốn tìm:");
+			//int k = int.Parse(Console.ReadLine());
+			//kq = -1;
+			//for (int i = 0; i < M.Length; i++)
+			//{
+			//	if (M[i] == k)
+			//	{
+			//		kq = i;
+			//		break;
+			//	}
+			//}
+			//if (kq < 0)
+			//	Console.WriteLine("Không tìm thấy {0} trong mảng", k);
+			//else
+			//	Console.WriteLine("Tìm thấy {0} tại vị trí thứ {1}", k, kq);
+		}
+		static void Mang2Chieu()
+		{
+			Console.WriteLine("Mời bạn nhập vào số dòng :");
+			int dong = int.Parse(Console.ReadLine());
+			Console.WriteLine("Mời bạn nhập vào số cột :");
+			int cot = int.Parse(Console.ReadLine());
+			int[,] M = new int[dong, cot];
+			Random rd = new Random();
+			for (int i = 0; i < M.GetLength(0); i++)
+			{
+				for (int j = 0; j < M.GetLength(1); j++)
+				{
+					M[i, j] = rd.Next(100);
+				}
+			}
+			Console.WriteLine("Mảng 2 chiều là:");
+			for (int i = 0; i < M.GetLength(0); i++)
+			{
+				for (int j = 0; j < M.GetLength(1); j++)
+				{
+					Console.Write(M[i, j] + "\t");
+				}
+				Console.WriteLine();
+			}
+			
 		}
 		static void Main(string[] args)
 		{
 			Console.OutputEncoding = Encoding.UTF8;
 			Mang1chieu();
+			//Mang2Chieu();
 			Console.ReadLine();
 		}
 	}
