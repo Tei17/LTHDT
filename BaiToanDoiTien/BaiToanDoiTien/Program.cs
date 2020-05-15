@@ -19,7 +19,7 @@ namespace BaiToanDoiTien
 			int[] mangSL = new int[sL];
 			for (int i = 0; i < mangLoaiTien.Length; i++)
 			{
-				Console.WriteLine("Nhập loại tiền theo thứ tự giảm dần: ");
+				Console.Write("Nhập loại tiền theo thứ tự giảm dần: ");
 				int loaiTien = int.Parse(Console.ReadLine());
 				int soLuong;
 				mangLoaiTien[i] = loaiTien;
