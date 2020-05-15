@@ -11,9 +11,9 @@ namespace BaiToanDoiTien
 
 		static void BaiToanDongXu()
 		{
-			Console.WriteLine("Nhập giá trị đồng xu cần quy đổi: ");
+			Console.Write("Nhập giá trị đồng xu cần quy đổi: ");
 			int n = int.Parse(Console.ReadLine());
-			Console.WriteLine("Nhập số lượng đồng xu quy đổi: ");
+			Console.Write("Nhập số lượng đồng xu quy đổi: ");
 			int sL = int.Parse(Console.ReadLine());
 			int[] mangLoaiTien = new int[sL];
 			int[] mangSL = new int[sL];
